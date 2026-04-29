@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      display: flex;
+      height: 720px;
+    }
+     .logo {
+   position: absolute;
+   top: 10px;
+   left: 10px;
+   width: 50px;
+   height: 50px;
+   border-radius: 50%;
+   object-fit: cover;
+   border: 2px;
+}
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      background-color: #333;
+      padding: 10px 55px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: nowwrap;
+      gap: 20px;
+      height:65px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 14px;
+      border-radius: 8px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      background-color: white;
+      color: black;
+    }
+
+    .search-section {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .search-section input {
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      width: 200px;
+    }
+
+    .search-section button {
+      padding: 8px 16px;
+      background-color: #fff;
+      color: #333;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.2s, color 0.2s;
+    }
+    .search-section button:hover {
+      background-color: orange;
+      color: black;
+    }
+    .main {
+      display: flex;
+      flex: 1;
+    }
+
+    .left, .right {
+      flex: 1;
+      padding: 40px;
+    }
+
+    .left {
+      background-color: #eaf5ed;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .left img {
+      max-width: 200px;
+      margin-bottom: 20px;
+    }
+
+    .left h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .left p {
+      max-width: 400px;
+      font-size: 15px;
+      color: #555;
+    }
+
+    .right {
+      background-color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .form-box {
+      max-width: 350px;
+      width: 100%;
+    }
+
+    .form-box h3 {
+      text-align: right;
+      margin-bottom: 20px;
+    }
+
+    .social-login {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    .social-login button {
+      flex: 1;
+      margin: 0 5px;
+      padding: 1px;
+      border: 1px solid #ccc;
+      background: #fff;
+      cursor: pointer;
+      width:30px;
+      height:50px;
+    }
+
+    .divider {
+      text-align: center;
+      margin: 15px 0;
+      color: #aaa;
+    }
+
+    input[type="email"], input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .checkbox-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .login-btn {
+      width: 100%;
+      background-color: #404040;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .signup-link {
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    .signup-link a {
+      color: #999999;
+      text-decoration: none;
+    }
+
+    .course-link {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 13px;
+      color: #333;
+    }
+    .pict img{
+       width:30px;
+       height:30px;
+       }
+       
+    .error-message {
+      color: red;
+      font-size: 12px;
+      margin-top: -10px;
+      margin-bottom: 10px;
+      display: none;
+    }
+    
+    .success-message {
+      color: green;
+      font-size: 14px;
+      margin-bottom: 15px;
+      text-align: center;
+      display: none;
+      padding: 10px;
+      background-color: #f0fff0;
+      border-radius: 5px;
+      border: 1px solid #dff0d8;
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+    <ul>
+    <img class="logo" src="logo1.jpg" alt="Logo">
+      <li><a href="Wisdomwave_Home.html">Home</a></li>
+      <li><a href="Tutorialsjava.html">Tutorials</a></li>
+      <li><a href="Quizzes.html">Quizzes</a></li>
+      <li><a href="java.html">Java</a></li>
+      <li><a href="c.html">C</a></li>
+    </ul>
+    <div class="search-section">
+      <input type="text" placeholder="Search for Courses...">
+      <button>Search</button>
+    </div>
+    <ul>
+      <li><a href="certification.html">Certification</a></li>
+      <li><a href="plus.html">Plus✨</a></li>
+      <li><a href="reviews.html">Reviews</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <div class="main">
+    <div class="left">
+      <img src="https://cdn-icons-png.flaticon.com/512/167/167707.png" alt="School Icon" />
+      <h2>Welcome Back!</h2>
+      <p>Log in to continue learning with thousands of tutorials, quizzes and skill-based content – all for free.</p>
+    </div>
+
+    <div class="right">
+      <div class="form-box">
+        <h3><a href="signup.html">Sign Up</a> | <strong><a href="login.html">Log In</strong></a></h3>
+        
+        <div id="successMessage" class="success-message">Login successful! Redirecting...</div>
+
+        <div class="social-login">
+          <button class="pict"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png"></button>
+          <button class="pict"><img src="https://thumbs.dreamstime.com/b/square-facebook-logo-isolated-white-background-transparent-attached-png-format-311465106.jpg"></button>
+          <button class="pict"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/960px-LinkedIn_logo_initials.png"></button>
+          <button class="pict"><img src="https://static.vecteezy.com/system/resources/previews/013/948/549/non_2x/google-logo-on-transparent-white-background-free-vector.jpg"></button>
+        </div>
+
+        <div class="divider">OR</div>
+
+        <form id="loginForm">
+          <input type="email" id="email" placeholder="Email" required />
+          <div id="emailError" class="error-message">Please enter a valid email address</div>
+          
+          <input type="password" id="password" placeholder="Password" required />
+          <div id="passwordError" class="error-message">Password must be at least 6 characters</div>
+
+          <div class="checkbox-row">
+            <label><input type="checkbox" id="rememberMe" checked /> Keep me logged in</label>
+            <a href="#" style="color: #999999;">Forgot Password?</a>
+          </div>
+
+          <button type="submit" class="login-btn">Log In</button>
+        </form>
+
+        <div class="signup-link">
+          Don't have an account? <a href="signup.html">Sign Up</a>
+        </div>
+
+        <div class="course-link">
+          Are you a course creator? <a href=" ">Click Here</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const loginForm = document.getElementById('loginForm');
+  const emailInput = document.getElementById('email');
+  const passwordInput = document.getElementById('password');
+  const emailError = document.getElementById('emailError');
+  const passwordError = document.getElementById('passwordError');
+  const successMessage = document.getElementById('successMessage');
+  const forgotPasswordLink = document.querySelector('a[href="#"]');
+
+  const validUsers = [
+    { email: 'user@example.com', password: 'password123', name: 'John' },
+    { email: 'test@test.com', password: 'test123', name: 'Test User' },
+    { email: 'bhargavichintamalla2007@gmail.com', password: 'Chinni222', name: 'Admin' }
+  ];
+
+  const modal = document.createElement('div');
+  modal.id = 'forgotPasswordModal';
+  modal.style.cssText = `
+    display: none; position: fixed; top: 0; left: 0; width: 100%;
+    height: 100%; background: rgba(0,0,0,0.5); z-index: 1000;
+    display: flex; justify-content: center; align-items: center;
+  `;
+
+  modal.innerHTML = `
+    <div style="background:white; padding:20px; border-radius:8px; width:350px; position: relative;">
+      <h2 style="margin-top:0;">Forgot Password</h2>
+      <p>Please enter your email address to reset your password.</p>
+      <input type="email" id="resetEmail" placeholder="Enter your email" style="width:100%; padding:10px; margin-top:10px; margin-bottom:10px;" />
+      <div style="display:flex; justify-content:flex-end; gap:10px;">
+        <button id="cancelBtn">Cancel</button>
+        <button id="sendBtn">Send</button>
+      </div>
+    </div>
+  `;
+
+  document.body.appendChild(modal);
+
+  forgotPasswordLink.addEventListener('click', function (e) {
+    e.preventDefault();
+    modal.style.display = 'flex';
+  });
+
+  modal.querySelector('#cancelBtn').addEventListener('click', function () {
+    modal.style.display = 'none';
+  });
+
+  modal.querySelector('#sendBtn').addEventListener('click', function () {
+    const email = modal.querySelector('#resetEmail').value.trim();
+    if (email === '') {
+      alert("Please enter your email.");
+    } else {
+      // Use validUsers, not validAccounts
+      const userExists = validUsers.some(user => user.email === email);
+      if (userExists) {
+        alert("Password reset link sent to: " + email);
+        modal.style.display = 'none';
+      } else {
+        alert("This email is not registered.");
+      }
+    }
+  });
+
+  loginForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    let emailValid = false;
+    let passwordValid = false;
+
+    if (!emailInput.value.includes('@')) {
+      emailError.style.display = 'block';
+    } else {
+      emailError.style.display = 'none';
+      emailValid = true;
+    }
+
+    if (passwordInput.value.length < 6) {
+      passwordError.style.display = 'block';
+    } else {
+      passwordError.style.display = 'none';
+      passwordValid = true;
+    }
+
+    if (emailValid && passwordValid) {
+      const user = validUsers.find(
+        user => user.email === emailInput.value && user.password === passwordInput.value
+      );
+
+      if (user) {
+        successMessage.textContent = `Welcome back, ${user.name}! Redirecting...`;
+        successMessage.style.color = 'green';
+        successMessage.style.display = 'block';
+
+        // Optionally redirect after login
+        setTimeout(() => {
+          window.location.href = 'Wisdomwave_Home.html';
+        }, 2000);
+      } else {
+        successMessage.textContent = 'Invalid email or password.';
+        successMessage.style.color = 'red';
+        successMessage.style.display = 'block';
+      }
+    }
+  });
+});
+
+
+</script></body>
+</html>

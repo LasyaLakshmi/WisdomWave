@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Java Tutorial - Part 5 | WisdomWave</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: linear-gradient(to right, #FFBB98, #FBE0C3);
+      color: #333;
+    }
+.logo {
+   position: absolute;
+   top: 10px;
+   left: 10px;
+   width: 50px;
+   height: 50px;
+   border-radius: 50%;
+   object-fit: cover;
+   border: 2px;
+}
+    nav {
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      background-color: #333;
+      padding: 15px 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    nav ul li {
+      margin-right: 30px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 10px;
+      border-radius: 8px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      background-color: white;
+      color: black;
+    }
+
+    .search-section {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .search-section input {
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      width: 200px;
+    }
+
+    .search-section button {
+      padding: 8px 16px;
+      background-color: #fff;
+      color: #333;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.2s, color 0.2s;
+    }
+
+    .search-section button:hover {
+      background-color: orange;
+      color: black;
+    }
+
+    .tutorial-container {
+      width: 950px;
+      margin: 50px auto;
+      background-color: #e6e6e6;
+      padding: 50px;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #404040;
+      font-size: 36px;
+    }
+
+    .chapter {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      margin-bottom: 30px;
+    }
+
+    .chapter h2 {
+      color: #2c7be5;
+      font-size: 28px;
+      margin-top: 0;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 10px;
+    }
+
+    .chapter h3 {
+      color: #3a3a3a;
+      font-size: 22px;
+      margin-top: 25px;
+    }
+
+    .chapter p, .chapter ul, .chapter ol {
+      font-size: 17px;
+      line-height: 1.6;
+    }
+
+    .chapter pre {
+      background-color: #f5f5f5;
+      padding: 15px;
+      border-radius: 8px;
+      overflow-x: auto;
+      font-family: 'Courier New', monospace;
+    }
+
+    .quiz-btn {
+    display: block; 
+    margin: 20px auto 0;
+    padding: 12px 25px;
+    background-color: #404040;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    width: fit-content;
+    }
+
+    .code {
+      background-color: #f0f0f0;
+      padding: 2px 5px;
+      border-radius: 3px;
+      font-family: 'Courier New', monospace;
+    }
+
+    .note {
+      background-color: #fffde7;
+      padding: 15px;
+      border-left: 4px solid #ffd600;
+      margin: 20px 0;
+    }
+
+    .button-row {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 40px;
+    }
+
+    .nav-btn {
+      padding: 12px 25px;
+      background-color: #404040;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .nav-btn:hover {
+      background-color: #333;
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <ul>
+    <img class="logo" src="logo1.jpg" alt="Logo">
+    <li><a href="Wisdomwave_Home.html">Home</a></li>
+    <li><a href="Tutorialsjava.html">Tutorials</a></li>
+    <li><a href="Quizzes.html">Quizzes</a></li>
+    <li><a href="java.html">Java</a></li>
+    <li><a href="c.html">C</a></li>
+  </ul>
+  <div class="search-section">
+    <input type="text" placeholder="Search for Courses...">
+    <button>Search</button>
+  </div>
+  <ul>
+    <li><a href="certification.html">Certification</a></li>
+    <li><a href="plus.html">Plus✨</a></li>
+    <li><a href="reviews.html">Reviews</a></li>
+    <li><a href="contact.html">Contact Us</a></li>
+  </ul>
+</nav>
+
+<div class="tutorial-container">
+  <h1>Java  Programming Tutorial</h1>
+
+  <div class="chapter">
+    <h2>13. Java Packages</h2>
+    <h3>What are Packages?</h3>
+    <p>Packages in Java are used to group related classes, interfaces, and sub-packages. They help organize code and avoid name conflicts.</p>
+    <h3>Types of Packages</h3>
+    <ul>
+      <li><strong>Built-in packages:</strong> java.util, java.io, etc.</li>
+      <li><strong>User-defined packages:</strong> Created by programmers for organizing their own classes.</li>
+    </ul>
+    <h3>Creating a Package</h3>
+    <pre>package mypackage;
+
+public class MyClass {
+    public void display() {
+        System.out.println("This is my package!");
+    }
+}</pre>
+    <a href="packages.html" class="quiz-btn">Take Quiz on Packages</a>
+  </div>
+
+  <div class="chapter">
+    <h2>14. Java Wrapper Classes</h2>
+    <h3>What are Wrapper Classes?</h3>
+    <p>Wrapper classes convert primitive data types into objects. They are found in the <span class="code">java.lang</span> package.</p>
+    <h3>Examples</h3>
+    <ul>
+      <li><span class="code">int → Integer</span></li>
+      <li><span class="code">char → Character</span></li>
+      <li><span class="code">boolean → Boolean</span></li>
+    </ul>
+    <pre>int a = 10;
+Integer obj = Integer.valueOf(a);  // Boxing
+int b = obj.intValue();            // Unboxing</pre>
+    <a href="wrapper-classes.html" class="quiz-btn">Take Quiz on Wrapper Classes</a>
+  </div>
+
+  <div class="chapter">
+    <h2>15. Java Exception Handling</h2>
+    <h3>What is Exception Handling?</h3>
+    <p>Exception handling in Java deals with runtime errors, helping programs run smoothly without crashing.</p>
+    <h3>Try-Catch Example</h3>
+    <pre>try {
+    int divide = 10 / 0;
+} catch (ArithmeticException e) {
+    System.out.println("Cannot divide by zero!");
+}</pre>
+    <h3>Keywords</h3>
+    <ul>
+      <li><span class="code">try</span>, <span class="code">catch</span>, <span class="code">finally</span>, <span class="code">throw</span>, <span class="code">throws</span></li>
+    </ul>
+    <a href="multithreading.html" class="quiz-btn">Take Quiz on Exceptions</a>
+  </div>
+
+  <div class="button-row">
+    <a href="next3.html" class="nav-btn">← Previous: Arrays</a>
+    <a href="next5.html" class="nav-btn">Next: Multithreading →</a>
+  </div>
+</div>
+
+</body>
+</html>

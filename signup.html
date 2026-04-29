@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Page</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      display: flex;
+      height: 720px;
+      margin: 0;
+      padding-top: 65px; /* Account for fixed nav */
+    }
+    
+    .logo {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      background-color: #333;
+      padding: 10px 55px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: nowrap;
+      gap: 20px;
+      height:65px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 14px;
+      border-radius: 8px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      background-color: white;
+      color: black;
+    }
+
+    .search-section {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .search-section input {
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      width: 200px;
+    }
+
+    .search-section button {
+      padding: 8px 16px;
+      background-color: #fff;
+      color: #333;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.2s, color 0.2s;
+    }
+
+    .search-section button:hover {
+      background-color: orange;
+      color: black;
+    }
+
+    .left, .right {
+      flex: 1;
+      padding: 40px;
+    }
+
+    .left {
+      background-color: #eaf5ed;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .left img {
+      max-width: 200px;
+      margin-bottom: 20px;
+    }
+
+    .left h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .left p {
+      max-width: 400px;
+      font-size: 15px;
+      color: #555;
+    }
+
+    .right {
+      background-color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .form-box {
+      max-width: 350px;
+      width: 100%;
+    }
+
+    .form-box h3 {
+      text-align: right;
+      margin-bottom: 20px;
+    }
+
+    .social-login {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    .social-login button {
+      flex: 1;
+      margin: 0 5px;
+      padding: 1px;
+      border: 1px solid #ccc;
+      background: #fff;
+      cursor: pointer;
+      width:30px;
+      height:50px;
+    }
+
+    .divider {
+      text-align: center;
+      margin: 15px 0;
+      color: #aaa;
+    }
+
+    input[type="email"], input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .login-btn {
+      width: 100%;
+      background-color: #404040;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .signup-link {
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    .signup-link a {
+      color: #999999;
+      text-decoration: none;
+    }
+
+    .course-link {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 13px;
+      color: #333;
+    }
+    
+    .pict img {
+      width:30px;
+      height:30px;
+    }
+    
+    /* Added styles for messages */
+    .message {
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      text-align: center;
+      display: none;
+    }
+    
+    .success {
+      background-color: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+    }
+    
+    .error {
+      background-color: #f8d7da;
+      color: #721c24;
+      border: 1px solid #f5c6cb;
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+    <ul>
+    <img class="logo" src="logo1.jpg" alt="Logo">
+      <li><a href="Wisdomwave_Home.html">Home</a></li>
+      <li><a href="Tutorialsjava.html">Tutorials</a></li>
+      <li><a href="Quizzes.html">Quizzes</a></li>
+      <li><a href="java.html">Java</a></li>
+      <li><a href="c.html">C</a></li>
+    </ul>
+    <div class="search-section">
+      <input type="text" placeholder="Search for Courses...">
+      <button>Search</button>
+    </div>
+    <ul>
+      <li><a href="certification.html">Certification</a></li>
+      <li><a href="plus.html">Plus✨</a></li>
+      <li><a href="reviews.html">Reviews</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+
+
+  <div class="left">
+    <img src="https://cdn-icons-png.flaticon.com/512/167/167707.png" alt="Learning App"/>
+    <h2>Empower Yourself For Free</h2>
+    <p>Join our community of 45 million+ learners, upskill with accredited courses, explore career tools, and psychometrics – all for free.</p>
+    <p style="margin-top: 30px;">Having trouble Logging In? <a href="#">Get in touch</a></p>
+  </div>
+
+  <div class="right">
+    <div class="form-box">
+      <h3><a href="signup.html">Sign Up</a> | <strong><a href="login.html">Log In</strong></h3>
+      
+      <!-- Added message divs -->
+      <div id="successMessage" class="message success"></div>
+      <div id="errorMessage" class="message error"></div>
+
+      <div class="social-login">
+        <button class="pict"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png"></button>
+        <button class="pict"><img src="https://thumbs.dreamstime.com/b/square-facebook-logo-isolated-white-background-transparent-attached-png-format-311465106.jpg"></button>
+        <button class="pict"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/960px-LinkedIn_logo_initials.png"></button>
+        <button class="pict"><img src="https://static.vecteezy.com/system/resources/previews/013/948/549/non_2x/google-logo-on-transparent-white-background-free-vector.jpg"></button>
+      </div>
+
+      <div class="divider">OR</div>
+
+      <form id="loginForm">
+        <input type="email" id="email" placeholder="Email" required />
+        <input type="password" id="password" placeholder="Password" required />
+        <button type="submit" class="login-btn">Log In</button>
+      </form>
+
+      <div class="signup-link">
+        Don't have an account? <a href="signup.html">Sign Up</a>
+      </div>
+
+      <div class="course-link">
+        Are you a course creator? <a href="#">Click Here</a>
+      </div>
+    </div>
+  </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const loginForm = document.getElementById('loginForm');
+    const successMessage = document.getElementById('successMessage');
+    const errorMessage = document.getElementById('errorMessage');
+    
+    // Test accounts - you can add more or modify these
+    const validAccounts = [
+        { email: 'user@example.com', password: 'password123', name: 'Test User' },
+        { email: 'bhargavichintamalla2007@gmail.com', password: 'Chinni222', name: 'Admin' }
+    ];
+    
+    loginForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Hide any previous messages
+        successMessage.style.display = 'none';
+        errorMessage.style.display = 'none';
+        
+        // Get input values
+        const email = document.getElementById('email').value.trim();
+        const password = document.getElementById('password').value.trim();
+        
+        // Find matching account (case insensitive for email)
+        const matchedAccount = validAccounts.find(account => 
+            account.email.toLowerCase() === email.toLowerCase() && 
+            account.password === password
+        );
+        
+        if (matchedAccount) {
+            // Successful login
+            successMessage.textContent = `Welcome back, ${matchedAccount.name}! You are now logged in. Redirecting...`;
+            successMessage.style.display = 'block';
+            
+            // Store login state in sessionStorage
+            sessionStorage.setItem('isLoggedIn', 'true');
+            sessionStorage.setItem('userName', matchedAccount.name);
+            
+            // Redirect to home page after 2 seconds
+            setTimeout(function() {
+                window.location.href = 'Wisdomwave_Home.html';
+            }, 2000);
+        } else {
+            // Failed login
+            errorMessage.textContent = 'Invalid email or password. Please try again.';
+            errorMessage.style.display = 'block';
+        }
+    });
+    
+    // Check if already logged in when page loads
+    if (sessionStorage.getItem('isLoggedIn') === 'true') {
+        const userName = sessionStorage.getItem('userName') || 'User';
+        successMessage.textContent = `Welcome back, ${userName}! You are already logged in.`;
+        successMessage.style.display = 'block';
+        
+        // Hide the message after 3 seconds
+        setTimeout(function() {
+            successMessage.style.display = 'none';
+        }, 3000);
+    }
+});
+</script>
+
+</body>
+</html>

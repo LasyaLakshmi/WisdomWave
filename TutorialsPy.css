@@ -1,0 +1,77 @@
+<html>
+<head>
+  <title>Tutorials Python</title>
+  <link rel="stylesheet"type="text/css"href="pt.css"/>
+</head>
+
+<body>
+
+  <nav>
+    <ul>
+    <img class="left" src="logo.jpeg" alt="Logo">
+      <li><a href="Wisdomwave_Home.html">Home</a></li>
+      <li><a href="Tutorialsjava.html">Tutorials</a></li>
+      <li><a href="Quizzes.html">Quizzes</a></li>
+      <li><a href="java.html">Java</a></li>
+      <li><a href="c.html">C</a></li>
+    </ul>
+    <div class="search-section">
+      <input type="text" placeholder="Search for Courses...">
+      <button>Search</button>
+    </div>
+    <ul>
+      <li><a href="certification.html">Certification</a></li>
+      <li><a href="plus.html">Plus</a></li>
+      <li><a href="Reviews.html">Reviews</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <nav class="nav1">
+    <ul>
+      <li><a href="Tutorialsjava.html">Java Tutorial</a></li>
+      <li><a href="Tutorialsc.html">C Tutorial</a></li>
+      <li><a href="TutorialsC++.html">C++ Tutorial</a></li>
+      <li><a href="TutorialsPy.html">Python Tutorial</a></li>
+      <li><a href="certification.html">SQL Tutorial</a></li>
+    </ul>
+  </nav>
+
+<div class="py-box1">
+<h1> Learn Python </h1>
+
+<div class="py-box">
+  <h2>✨ Core Topics ✨</h2>
+  
+ <div class="video">
+<iframe width="435" height="300" src="https://www.youtube.com/embed/irqbmMNs2Bo" allowfullscreen></iframe>
+  </div>
+
+ <div class="video">
+<iframe width="435" height="300" src="https://www.youtube.com/embed/KJgsSFOSQv0" allowfullscreen></iframe>
+  </div>
+
+ <div class="video">
+<iframe width="435" height="300" src="https://www.youtube.com/embed/xDHSP_hyWJA" allowfullscreen></iframe>
+  </div>
+</div>
+
+<div class="py-box">
+  <h2>✨ Applications ✨</h2>
+  
+ <div class="video">
+<iframe width="435" height="300" src="https://www.youtube.com/embed/Af3s3KsxStY" allowfullscreen></iframe>
+  </div>
+
+ <div class="video">
+<iframe width="435" height="300" src="https://www.youtube.com/embed/ECoIdyfcObE" allowfullscreen></iframe>
+  </div>
+
+ <div class="video">
+<iframe width="435" height="300" src="https://www.youtube.com/embed/iOeebAM_C5g" allowfullscreen></iframe>
+  </div>
+</div>
+</div>
+
+</body>
+</html>

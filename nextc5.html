@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>C Tutorial | WisdomWave</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: linear-gradient(to right, #FFBB98, #FBE0C3);
+      color: #333;
+    }
+.logo {
+   position: absolute;
+   top: 10px;
+   left: 10px;
+   width: 50px;
+   height: 50px;
+   border-radius: 50%;
+   object-fit: cover;
+   border: 2px;
+}
+    nav {
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      background-color: #333;
+      padding: 15px 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    nav ul li {
+      margin-right: 30px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 14px;
+      border-radius: 8px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      background-color: white;
+      color: black;
+    }
+
+    .search-section {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .search-section input {
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      width: 200px;
+    }
+
+    .search-section button {
+      padding: 8px 16px;
+      background-color: #fff;
+      color: #333;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.2s, color 0.2s;
+    }
+
+    .search-section button:hover {
+      background-color: orange;
+      color: black;
+    }
+
+    .tutorial-container {
+      width: 950px;
+      margin: 50px auto;
+      background-color: #e6e6e6;
+      padding: 50px;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #404040;
+      font-size: 36px;
+    }
+
+    .chapter {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      margin-bottom: 30px;
+    }
+
+    .chapter h2 {
+      color: #2c7be5;
+      font-size: 28px;
+      margin-top: 0;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 10px;
+    }
+
+    .chapter pre {
+      background-color: #f5f5f5;
+      padding: 15px;
+      border-radius: 8px;
+      overflow-x: auto;
+      font-family: 'Courier New', monospace;
+    }
+
+    .quiz-btn {
+      display: block;
+      margin: 20px auto 0;
+      padding: 12px 25px;
+      background-color: #404040;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      text-align: center;
+      transition: background-color 0.3s;
+      width: fit-content;
+    }
+
+    .button-row {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 40px;
+    }
+
+    .nav-btn {
+      padding: 12px 25px;
+      background-color: #404040;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .nav-btn:hover {
+      background-color: #333;
+    }
+
+  </style>
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <img class="logo" src="logo1.jpg" alt="Logo">
+      <li><a href="Wisdomwave_Home.html">Home</a></li>
+      <li><a href="Tutorialsjava.html">Tutorials</a></li>
+      <li><a href="Quizzes.html">Quizzes</a></li>
+      <li><a href="java.html">Java</a></li>
+      <li><a href="c.html">C</a></li>
+    </ul>
+    <div class="search-section">
+      <input type="text" placeholder="Search for Courses...">
+      <button>Search</button>
+    </div>
+    <ul>
+      <li><a href="certification.html">Certification</a></li>
+      <li><a href="plus.html">Plus✨</a></li>
+      <li><a href="reviews.html">Reviews</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <div class="tutorial-container">
+    <h1>C Programming Tutorial</h1>
+
+    <div class="chapter">
+      <h2>21. Structures and Unions</h2>
+      <pre>
+// Structure definition
+struct Person {
+  char name[50];
+  int age;
+};
+
+struct Person person1 = {"John", 25};
+
+// Union definition
+union Data {
+  int i;
+  float f;
+  char str[20];
+};
+
+union Data data1;
+data1.i = 10;  // Only one member can hold a value at a time
+      </pre>
+      <a href="Structures and Unions.html" class="quiz-btn">Take Quiz on Structures and Unions</a>
+    </div>
+
+    <div class="chapter">
+      <h2>22. File Handling</h2>
+      <pre>
+FILE *file = fopen("example.txt", "w");
+if (file != NULL) {
+  fprintf(file, "Hello, world!");
+  fclose(file);
+}
+
+FILE *readFile = fopen("example.txt", "r");
+if (readFile != NULL) {
+  char str[100];
+  fscanf(readFile, "%s", str);
+  printf("%s\n", str);
+  fclose(readFile);
+}
+      </pre>
+      <a href="File Handling" class="quiz-btn">Take Quiz on File Handling</a>
+    </div>
+
+    <div class="chapter">
+      <h2>23. Command Line Arguments</h2>
+      <pre>
+#include &lt;stdio.h&gt;
+
+int main(int argc, char *argv[]) {
+  if (argc > 1) {
+    printf("Hello, %s!\n", argv[1]);  // argv[1] is the first command-line argument
+  } else {
+    printf("No arguments passed.\n");
+  }
+  return 0;
+}
+      </pre>
+      <a href="Command Line Arguments.html" class="quiz-btn">Take Quiz on Command Line Arguments</a>
+    </div>
+
+    <div class="chapter">
+      <h2>24. Typedef and Enum</h2>
+      <pre>
+// Typedef
+typedef unsigned long ulong;
+ulong num = 1000;
+
+// Enum
+enum Day {Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday};
+enum Day today = Wednesday;
+printf("Today is %d\n", today);  // Prints 2
+      </pre>
+      <a href="Typedef and Enum.html" class="quiz-btn">Take Quiz on Typedef and Enum</a>
+    </div>
+
+    <div class="button-row">
+      <a href="nextc4.html" class="nav-btn">← Previous: Structures & File Handling</a>
+      <a href="Tutorialsc.html" class="nav-btn">← Back to Tutorials</a>
+    </div>
+  </div>
+
+</body>
+</html>

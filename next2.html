@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Java Tutorial - Page 3 | WisdomWave</title>
+  <style>
+     body {
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: linear-gradient(to right, #FFBB98, #FBE0C3);
+      color: #333;
+    }
+.logo {
+   position: absolute;
+   top: 10px;
+   left: 10px;
+   width: 50px;
+   height: 50px;
+   border-radius: 50%;
+   object-fit: cover;
+   border: 2px;
+}
+    nav {
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      background-color: #333;
+      padding: 15px 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    nav ul li {
+      margin-right: 30px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 14px;
+      border-radius: 8px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      background-color: white;
+      color: black;
+    }
+
+    .search-section {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .search-section input {
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      width: 200px;
+    }
+
+    .search-section button {
+      padding: 8px 16px;
+      background-color: #fff;
+      color: #333;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.2s, color 0.2s;
+    }
+
+    .search-section button:hover {
+      background-color: orange;
+      color: black;
+    }
+
+    .tutorial-container {
+      width: 950px;
+      margin: 50px auto;
+      background-color: #e6e6e6;
+      padding: 50px;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #404040;
+      font-size: 36px;
+    }
+
+    .chapter {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      margin-bottom: 30px;
+    }
+
+    .chapter h2 {
+      color: #2c7be5;
+      font-size: 28px;
+      margin-top: 0;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 10px;
+    }
+
+    .chapter h3 {
+      color: #3a3a3a;
+      font-size: 22px;
+      margin-top: 25px;
+    }
+
+    .chapter p, .chapter ul, .chapter ol {
+      font-size: 17px;
+      line-height: 1.6;
+    }
+
+    .chapter pre {
+      background-color: #f5f5f5;
+      padding: 15px;
+      border-radius: 8px;
+      overflow-x: auto;
+      font-family: 'Courier New', monospace;
+    }
+
+    .quiz-btn {
+    display: block; 
+    margin: 20px auto 0;
+    padding: 12px 25px;
+    background-color: #404040;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    width: fit-content;
+    }
+
+    .code {
+      background-color: #f0f0f0;
+      padding: 2px 5px;
+      border-radius: 3px;
+      font-family: 'Courier New', monospace;
+    }
+
+    .note {
+      background-color: #fffde7;
+      padding: 15px;
+      border-left: 4px solid #ffd600;
+      margin: 20px 0;
+    }
+
+    .button-row {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 40px;
+    }
+
+    .nav-btn {
+      padding: 12px 25px;
+      background-color: #404040;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .nav-btn:hover {
+      background-color: #333;
+    }
+
+  </style>
+</head>
+<body>
+
+<nav>
+  <ul>
+    <img class="logo" src="logo1.jpg" alt="Logo">
+    <li><a href="Wisdomwave_Home.html">Home</a></li>
+    <li><a href="Tutorialsjava.html">Tutorials</a></li>
+    <li><a href="Quizzes.html">Quizzes</a></li>
+    <li><a href="java.html">Java</a></li>
+    <li><a href="c.html">C</a></li>
+  </ul>
+  <div class="search-section">
+    <input type="text" placeholder="Search for Courses...">
+    <button>Search</button>
+  </div>
+  <ul>
+    <li><a href="certification.html">Certification</a></li>
+    <li><a href="plus.html">Plus✨</a></li>
+    <li><a href="reviews.html">Reviews</a></li>
+    <li><a href="contact.html">Contact Us</a></li>
+  </ul>
+</nav>
+
+<div class="tutorial-container">
+  <h1>Java Programming Tutorial</h1>
+
+  <div class="chapter">
+    <h2>7. Inheritance</h2>
+
+    <h3>What is Inheritance?</h3>
+    <p>Inheritance allows one class to inherit properties and methods from another class using the <span class="code">extends</span> keyword.</p>
+    <pre>
+class Animal {
+    void eat() {
+        System.out.println("This animal eats food.");
+    }
+}
+
+class Dog extends Animal {
+    void bark() {
+        System.out.println("Dog barks");
+    }
+}
+
+public class Test {
+    public static void main(String[] args) {
+        Dog d = new Dog();
+        d.eat();  // Inherited
+        d.bark(); // Own method
+    }
+}
+    </pre>
+
+    <a href="inheritance.html" class="quiz-btn">Take Quiz on Inheritance</a>
+  </div>
+
+  <div class="chapter">
+    <h2>8. Polymorphism</h2>
+
+    <h3>Types of Polymorphism</h3>
+    <ul>
+      <li><strong>Compile-time (Method Overloading)</strong></li>
+      <li><strong>Runtime (Method Overriding)</strong></li>
+    </ul>
+
+    <pre>
+// Method Overloading
+class MathUtils {
+    int add(int a, int b) { return a + b; }
+    double add(double a, double b) { return a + b; }
+}
+
+// Method Overriding
+class Animal {
+    void sound() {
+        System.out.println("Some sound");
+    }
+}
+
+class Cat extends Animal {
+    void sound() {
+        System.out.println("Meow");
+    }
+}
+    </pre>
+
+    <a href="polymorphism.html" class="quiz-btn">Take Quiz on Polymorphism</a>
+  </div>
+
+  <div class="chapter">
+    <h2>9. Encapsulation</h2>
+
+    <h3>What is Encapsulation?</h3>
+    <p>Encapsulation is the practice of wrapping data and methods into a single unit (class) and restricting access using access modifiers.</p>
+
+    <pre>
+class Person {
+    private String name;
+
+    public void setName(String n) {
+        name = n;
+    }
+
+    public String getName() {
+        return name;
+    }
+}
+    </pre>
+
+    <div class="note">
+      <strong>Note:</strong> Use <span class="code">private</span> for fields and <span class="code">public</span> getters/setters for controlled access.
+    </div>
+
+    <a href="encapsulation.html" class="quiz-btn">Take Quiz on Encapsulation</a>
+  </div>
+
+  <div class="chapter">
+    <h2>10. Abstraction</h2>
+
+    <h3>What is Abstraction?</h3>
+    <p>Abstraction hides complex implementation details and shows only the essential features.</p>
+    <p>Implemented using <strong>abstract classes</strong> and <strong>interfaces</strong>.</p>
+
+    <pre>
+// Abstract class
+abstract class Shape {
+    abstract void draw();
+}
+
+class Circle extends Shape {
+    void draw() {
+        System.out.println("Drawing a circle");
+    }
+}
+    </pre>
+
+    <a href="abstraction.html" class="quiz-btn">Take Quiz on Abstraction</a>
+  </div>
+
+  <div class="button-row">
+    <a href="next1.html" class="nav-btn">← Previous: Control & Methods</a>
+    <a href="next3.html" class="nav-btn">Next: Arrays & Exception →</a>
+  </div>
+</div>
+
+</body>
+</html>

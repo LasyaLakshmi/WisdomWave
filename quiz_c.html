@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>C Quiz Topics</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #FFBB98,#FBE0C3);
+      color: #344648;
+    }
+
+    .logo {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px;
+    }
+
+    nav {
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      background-color: #333;
+      padding: 15px 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    nav ul li {
+      margin-right: 30px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 14px;
+      border-radius: 8px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      background-color: white;
+      color: black;
+    }
+
+    .search-section {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .search-section input {
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      width: 200px;
+    }
+
+    .search-section button {
+      padding: 8px 16px;
+      background-color: #fff;
+      color: #333;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.2s, color 0.2s;
+    }
+
+    .search-section button:hover {
+      background-color: orange;
+      color: black;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 50px auto;
+      background-color: white;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 30px;
+      color: #344648;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      margin-top: 20px;
+    }
+
+    .topic-btn {
+      display: inline-block;
+      background: linear-gradient(to right, #000000, #555555);
+      color: white;
+      text-decoration: none;
+      border-radius: 40px;
+      width:300px;
+      padding: 20px 0;  
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .topic-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-left">
+    <img class="logo" src="logo1.jpg" alt="Logo">
+    <ul>
+      <li><a href="Wisdomwave_Home.html">Home</a></li>
+      <li><a href="Tutorialsc.html">Tutorials</a></li>
+      <li><a href="Quizzes.html">Quizzes</a></li>
+      <li><a href="java.html">Java</a></li>
+      <li><a href="c.html">C</a></li>
+    </ul>
+  </div>
+  <div class="search-section">
+    <input type="text" placeholder="Search for Courses...">
+    <button>Search</button>
+  </div>
+  <div class="nav-right">
+    <ul>
+      <li><a href="certification.html">Certification</a></li>
+      <li><a href="plus.html">Plus✨</a></li>
+      <li><a href="reviews.html">Reviews</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+  <h1>📚 Choose a C Topic to Start the Quiz</h1>
+  <div class="grid">
+    <a class="topic-btn" href="introduction-to-c.html">Introduction to C</a>
+    <a class="topic-btn" href="c-syntax.html">C Syntax</a>
+    <a class="topic-btn" href="data-types.html">Data Types</a>
+    <a class="topic-btn" href="variables.html">Variables</a>
+    <a class="topic-btn" href="constants.html">Constants</a>
+    <a class="topic-btn" href="keywords.html">Keywords</a>
+    <a class="topic-btn" href="operators.html">Operators</a>
+    <a class="topic-btn" href="expressions.html">Expressions</a>
+    <a class="topic-btn" href="type-conversion.html">Type Conversion</a>
+    <a class="topic-btn" href="input-output.html">Input/Output</a>
+    <a class="topic-btn" href="if-else.html">If-Else</a>
+    <a class="topic-btn" href="else-if-ladder.html">Else-If Ladder</a>
+    <a class="topic-btn" href="switch.html">Switch</a>
+    <a class="topic-btn" href="loops.html">Loops</a>
+    <a class="topic-btn" href="pointers.html">Pointers</a>
+    <a class="topic-btn" href="memory-allocation.html">Memory Allocation</a>
+    <a class="topic-btn" href="storage-classes.html">Storage Classes</a>
+    <a class="topic-btn" href="preprocessor-directives.html">Preprocessor Directives</a>
+    <a class="topic-btn" href=" Structures and Unions.html">Structures and Unions</a>
+    <a class="topic-btn" href="File Handling.html">File Handling</a>
+    <a class="topic-btn" href="Command Line Arguments.html">Command Line Arguments</a>
+    <a class="topic-btn" href="Typedef and Enum.html">Typedef and Enum</a>
+  </div>
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

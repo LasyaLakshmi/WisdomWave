@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Java Tutorial - Page 2 | WisdomWave</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: linear-gradient(to right, #FFBB98, #FBE0C3);
+      color: #333;
+    }
+.logo {
+   position: absolute;
+   top: 10px;
+   left: 10px;
+   width: 50px;
+   height: 50px;
+   border-radius: 50%;
+   object-fit: cover;
+   border: 2px;
+}
+    nav {
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      background-color: #333;
+      padding: 15px 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    nav ul li {
+      margin-right: 30px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 14px;
+      border-radius: 8px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      background-color: white;
+      color: black;
+    }
+
+    .search-section {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .search-section input {
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      width: 200px;
+    }
+
+    .search-section button {
+      padding: 8px 16px;
+      background-color: #fff;
+      color: #333;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.2s, color 0.2s;
+    }
+
+    .search-section button:hover {
+      background-color: orange;
+      color: black;
+    }
+
+    .tutorial-container {
+      width: 950px;
+      margin: 50px auto;
+      background-color: #e6e6e6;
+      padding: 50px;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #404040;
+      font-size: 36px;
+    }
+
+    .chapter {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      margin-bottom: 30px;
+    }
+
+    .chapter h2 {
+      color: #2c7be5;
+      font-size: 28px;
+      margin-top: 0;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 10px;
+    }
+
+    .chapter h3 {
+      color: #3a3a3a;
+      font-size: 22px;
+      margin-top: 25px;
+    }
+
+    .chapter p, .chapter ul, .chapter ol {
+      font-size: 17px;
+      line-height: 1.6;
+    }
+
+    .chapter pre {
+      background-color: #f5f5f5;
+      padding: 15px;
+      border-radius: 8px;
+      overflow-x: auto;
+      font-family: 'Courier New', monospace;
+    }
+
+
+    .quiz-btn {
+    display: block; 
+    margin: 20px auto 0;
+    padding: 12px 25px;
+    background-color: #404040;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    width: fit-content;
+    }
+    .code {
+      background-color: #f0f0f0;
+      padding: 2px 5px;
+      border-radius: 3px;
+      font-family: 'Courier New', monospace;
+    }
+
+    .note {
+      background-color: #fffde7;
+      padding: 15px;
+      border-left: 4px solid #ffd600;
+      margin: 20px 0;
+    }
+
+    .button-row {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 40px;
+    }
+
+    .nav-btn {
+      padding: 12px 25px;
+      background-color: #404040;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .nav-btn:hover {
+      background-color: #333;
+    }
+
+  </style>
+</head>
+<body>
+
+<nav>
+  <ul>
+    <img class="logo" src="logo1.jpg" alt="Logo">
+    <li><a href="Wisdomwave_Home.html">Home</a></li>
+    <li><a href="Tutorialsjava.html">Tutorials</a></li>
+    <li><a href="Quizzes.html">Quizzes</a></li>
+    <li><a href="java.html">Java</a></li>
+    <li><a href="c.html">C</a></li>
+  </ul>
+  <div class="search-section">
+    <input type="text" placeholder="Search for Courses...">
+    <button>Search</button>
+  </div>
+  <ul>
+    <li><a href="certification.html">Certification</a></li>
+    <li><a href="plus.html">Plus✨</a></li>
+    <li><a href="reviews.html">Reviews</a></li>
+    <li><a href="contact.html">Contact Us</a></li>
+  </ul>
+</nav>
+
+<div class="tutorial-container">
+  <h1>Java Programming Tutorial</h1>
+
+  <div class="chapter">
+    <h2>4. Control Flow Statements</h2>
+
+    <h3>Conditional Statements</h3>
+    <p>Java supports decision-making through conditional statements.</p>
+    <ul>
+      <li><span class="code">if</span>, <span class="code">if-else</span>, and <span class="code">else-if</span></li>
+      <li><span class="code">switch</span> - for multiple specific value checks</li>
+    </ul>
+    <pre>
+int num = 10;
+if (num > 0) {
+    System.out.println("Positive");
+} else {
+    System.out.println("Not Positive");
+}
+    </pre>
+
+    <h3>Looping Statements</h3>
+    <ul>
+      <li><span class="code">for</span>, <span class="code">while</span>, and <span class="code">do-while</span> loops</li>
+    </ul>
+    <pre>
+for (int i = 1; i <= 3; i++) {
+    System.out.println("Count: " + i);
+}
+    </pre>
+
+    <a href="control-flow.html" class="quiz-btn">Take Quiz on Control Flow</a>
+  </div>
+
+  <div class="chapter">
+    <h2>5. Methods in Java</h2>
+
+    <h3>Defining and Calling Methods</h3>
+    <p>Methods are reusable blocks of code that perform tasks.</p>
+    <pre>
+public class MyClass {
+    static void greet() {
+        System.out.println("Hello!");
+    }
+
+    public static void main(String[] args) {
+        greet();
+    }
+}
+    </pre>
+
+    <h3>Method Parameters and Return</h3>
+    <pre>
+static int add(int a, int b) {
+    return a + b;
+}
+    </pre>
+
+    <a href="methods.html" class="quiz-btn">Take Quiz on Methods</a>
+  </div>
+
+  <div class="chapter">
+    <h2>6. Object-Oriented Programming Basics</h2>
+
+    <h3>Classes and Objects</h3>
+    <p>A class is a blueprint; an object is an instance of a class.</p>
+    <pre>
+class Car {
+    String color = "Red";
+
+    void drive() {
+        System.out.println("Car is driving");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Car myCar = new Car();
+        myCar.drive();
+    }
+}
+    </pre>
+
+    <h3>Constructors</h3>
+    <pre>
+class Student {
+    String name;
+
+    Student(String n) {
+        name = n;
+    }
+}
+    </pre>
+
+    <a href="oop-basics.html" class="quiz-btn">Take Quiz on OOP Basics</a>
+  </div>
+
+  <div class="button-row">
+    <a href="java.html" class="nav-btn">← Previous: Basics</a>
+    <a href="next2.html" class="nav-btn">Next: OOP Concepts →</a>
+  </div>
+</div>
+
+</body>
+</html>

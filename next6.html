@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Java Tutorial | WisdomWave - Page 7</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: linear-gradient(to right, #FFBB98, #FBE0C3);
+      color: #333;
+    }
+.logo {
+   position: absolute;
+   top: 10px;
+   left: 10px;
+   width: 50px;
+   height: 50px;
+   border-radius: 50%;
+   object-fit: cover;
+   border: 2px;
+}
+    nav {
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      background-color: #333;
+      padding: 15px 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    nav ul li {
+      margin-right: 30px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 14px;
+      border-radius: 8px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      background-color: white;
+      color: black;
+    }
+
+    .search-section {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .search-section input {
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      width: 200px;
+    }
+
+    .search-section button {
+      padding: 8px 16px;
+      background-color: #fff;
+      color: #333;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.2s, color 0.2s;
+    }
+
+    .search-section button:hover {
+      background-color: orange;
+      color: black;
+    }
+
+    .tutorial-container {
+      width: 950px;
+      margin: 50px auto;
+      background-color: #e6e6e6;
+      padding: 50px;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #404040;
+      font-size: 36px;
+    }
+
+    .chapter {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      margin-bottom: 30px;
+    }
+
+    .chapter h2 {
+      color: #2c7be5;
+      font-size: 28px;
+      margin-top: 0;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 10px;
+    }
+
+    .chapter h3 {
+      color: #3a3a3a;
+      font-size: 22px;
+      margin-top: 25px;
+    }
+
+    .chapter p, .chapter ul, .chapter ol {
+      font-size: 17px;
+      line-height: 1.6;
+    }
+
+    .chapter pre {
+      background-color: #f5f5f5;
+      padding: 15px;
+      border-radius: 8px;
+      overflow-x: auto;
+      font-family: 'Courier New', monospace;
+    }
+
+    .quiz-btn {
+    display: block; 
+    margin: 20px auto 0;
+    padding: 12px 25px;
+    background-color: #404040;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    width: fit-content;
+    }
+
+    .code {
+      background-color: #f0f0f0;
+      padding: 2px 5px;
+      border-radius: 3px;
+      font-family: 'Courier New', monospace;
+    }
+
+    .note {
+      background-color: #fffde7;
+      padding: 15px;
+      border-left: 4px solid #ffd600;
+      margin: 20px 0;
+    }
+
+    .button-row {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 40px;
+    }
+
+    .nav-btn {
+      padding: 12px 25px;
+      background-color: #404040;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .nav-btn:hover {
+      background-color: #333;
+    }
+
+  </style>
+</head>
+<body>
+
+<nav>
+  <ul>
+    <img class="logo" src="logo1.jpg" alt="Logo">
+    <li><a href="Wisdomwave_Home.html">Home</a></li>
+    <li><a href="Tutorialsjava.html">Tutorials</a></li>
+    <li><a href="Quizzes.html">Quizzes</a></li>
+    <li><a href="java.html">Java</a></li>
+    <li><a href="c.html">C</a></li>
+  </ul>
+  <div class="search-section">
+    <input type="text" placeholder="Search for Courses...">
+    <button>Search</button>
+  </div>
+  <ul>
+    <li><a href="certification.html">Certification</a></li>
+    <li><a href="plus.html">Plus✨</a></li>
+    <li><a href="reviews.html">Reviews</a></li>
+    <li><a href="contact.html">Contact Us</a></li>
+  </ul>
+</nav>
+
+<div class="tutorial-container">
+  <h1>Java Programming Tutorial</h1>
+
+  <div class="chapter">
+    <h2>19. Generics in Java</h2>
+    <h3>What are Generics?</h3>
+    <p>Generics allow you to define classes, interfaces, and methods with type parameters.</p>
+    
+    <h3>Generic Method Example</h3>
+    <pre>public class GenericExample {
+    public static <T> void printArray(T[] array) {
+        for (T element : array) {
+            System.out.println(element);
+        }
+    }
+
+    public static void main(String[] args) {
+        Integer[] intArray = {1, 2, 3};
+        printArray(intArray);
+    }
+}</pre>
+    
+    <a href="generics.html" class="quiz-btn">Take Quiz on Generics</a>
+  </div>
+
+  <div class="chapter">
+    <h2>20. Interfaces in Java</h2>
+    <h3>What is an Interface?</h3>
+    <p>An interface is a reference type in Java, it is similar to a class but can contain only constants, method signatures, default methods, static methods, and nested types.</p>
+    
+    <h3>Interface Example</h3>
+    <pre>interface Animal {
+    void sound();
+}
+
+class Dog implements Animal {
+    public void sound() {
+        System.out.println("Woof!");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Animal dog = new Dog();
+        dog.sound();
+    }
+}</pre>
+    
+    <a href="interfaces.html" class="quiz-btn">Take Quiz on Interfaces</a>
+  </div>
+
+  <div class="chapter">
+    <h2>21. Abstract Classes in Java</h2>
+    <h3>What is an Abstract Class?</h3>
+    <p>An abstract class in Java is a class that cannot be instantiated and is used to provide common functionality for subclasses.</p>
+    
+    <h3>Abstract Class Example</h3>
+    <pre>abstract class Shape {
+    abstract void draw();
+}
+
+class Circle extends Shape {
+    void draw() {
+        System.out.println("Drawing Circle");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Shape shape = new Circle();
+        shape.draw();
+    }
+}</pre>
+    
+    <a href="abstract-classes.html" class="quiz-btn">Take Quiz on Abstract Classes</a>
+  </div>
+
+  <div class="button-row">
+    <a href="next5.html" class="nav-btn">← Previous: Multithreading</a>
+    <a href="Tutorialsjava.html" class="nav-btn">← Back to Tutorials</a>
+  </div>
+</div>
+
+</body>
+</html>

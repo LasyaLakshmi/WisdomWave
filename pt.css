@@ -1,0 +1,157 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Georgia, serif;
+  background:  linear-gradient(to right, #FFBB98, #FBE0C3);
+}
+
+.logo {
+   position: absolute;
+   top: 10px;
+   left: 10px;
+   width: 50px;
+   height: 50px;
+   border-radius: 50%;
+   object-fit: cover;
+   border: 2px;
+}
+
+    nav {
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      background-color: #333;
+      padding: 15px 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    nav ul li {
+      margin-right: 30px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 14px;
+      border-radius: 8px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      background-color: white;
+      color: black;
+    }
+
+    .search-section {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .search-section input {
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      width: 200px;
+    }
+
+    .search-section button {
+      padding: 8px 16px;
+      background-color: #fff;
+      color: #333;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.2s, color 0.2s;
+    }
+
+    .search-section button:hover {
+      background-color: orange;
+      color: black;
+    }
+
+    .nav1 {
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      background-color: #4d4d4d;
+      padding: 15px 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+h1{
+  font-size: 3rem;
+  font-family: Tahoma;
+  color: #2c3e50;
+}
+
+.py-box1 {
+  background: #e6e6e6;
+  border-radius: 15px;
+  padding: 2rem;
+  margin: 2rem auto;
+  width: 95%;
+  box-shadow: 0 8px 20px rgba(52, 70, 72, 0.2);
+  font-family: 'Segoe UI', sans-serif;
+  color: #344648;
+}
+
+.py-box {
+  background: #f2f2f2;
+  border-radius: 15px;
+  padding: 2rem;
+  margin: 2rem auto;
+  width: 95%;
+  box-shadow: 0 8px 20px rgba(52, 70, 72, 0.2);
+  font-family: 'Segoe UI', sans-serif;
+  color: #344648;
+}
+
+.py-box h2 {
+  color: #344648;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  font-size: 1.8rem;
+}
+
+.video {
+  height:auto;
+  display: inline-flex;
+  padding: 5px;
+}
+    .submit-btn {
+      padding: 14px 24px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: white;
+      background: #404040;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+      width: 200px;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .submit-btn:hover{
+      transform: scale(1.05);
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
+    }
+.btn-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}

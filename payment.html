@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>WisdomWave - Payment Gateway</title>
+  <style>
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(to right, #FFBB98, #FBE0C3);
+  color: #333;
+}
+.logo {
+   position: absolute;
+   top: 10px;
+   left: 10px;
+   width: 50px;
+   height: 50px;
+   border-radius: 50%;
+   object-fit: cover;
+   border: 2px;
+}
+nav {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  background-color: #333;
+  padding: 15px 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  margin-right: 30px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 13px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: white;
+  color: black;
+}
+
+.search-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.search-section input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  width: 200px;
+}
+
+.search-section button {
+  padding: 8px 16px;
+  background-color: #fff;
+  color: #333;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.search-section button:hover {
+  background-color: orange;
+  color: black;
+}
+
+h1, h2, h3 {
+  text-align: center;
+}
+
+.payment-section {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem 1rem;
+  flex-wrap: wrap;
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  margin: 2rem auto;
+  width: 80%;
+  box-shadow: 0 8px 20px rgba(52, 70, 72, 0.2);
+  font-family: 'Segoe UI', sans-serif;
+  color: #344648;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.payment-info {
+  text-align: center;
+  margin-bottom: 10px;
+  padding: 10px;       
+  border-radius: 10px;
+}
+
+
+.payment-info h2 {
+  font-size: 2rem;
+  color: #d14b00;
+  margin-bottom: 10px;
+}
+
+.payment-info p {
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.payment-info p span {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #00b894;
+}
+
+.payment-options-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.payment-option {
+  width: 60px;
+  height: auto;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.payment-option img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.payment-option:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+}
+
+.payment-option p {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.payment-option a {
+  display: block;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+}
+
+.countries-box {
+  background-color: #1f2a37;
+  color: white;
+  padding: 40px 20px;
+  margin: 40px auto;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 1200px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.countries-box h2 {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+}
+
+.countries-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.country {
+  background-color: white;
+  color: black;
+  border-radius: 12px;
+  padding: 10px;
+  width: 100px;
+  height: 120px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.country:hover {
+  transform: scale(1.05);
+}
+
+.country img {
+  width: 100%;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.country p {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+
+.security-section {
+  background-color: #f8f9fa;
+  padding: 40px 20px;
+  margin: 40px auto;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 1200px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.security-section h2 {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.security-features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.security-feature {
+  flex: 1;
+  min-width: 250px;
+  padding: 20px;
+  background-color: black;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.security-feature h3 {
+  color: #d14b00;
+  margin-bottom: 15px;
+}
+
+.security-feature p {
+  color: white;
+  line-height: 1.6;
+}
+
+.compliance-badges {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.compliance-badge {
+  width: 100px;
+  height: auto;
+}
+
+.payment-methods-section {
+  background-color: white;
+  padding: 40px 20px;
+  margin: 40px auto;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 1200px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.payment-methods-section h2 {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.payment-methods-section p {
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto 30px;
+  font-size:18px;
+  line-height: 1.6;
+}
+.payment-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.payment-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.matter {
+  width: 300px;
+}
+
+
+.method-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.method-icon {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+  </style>
+</head>
+<body>
+<nav>
+  <ul>
+    <img class="logo" src="logo1.jpg" alt="Logo">
+    <li><a href="Wisdomwave_Home.html">Home</a></li>
+    <li><a href="Tutorialsjava.html">Tutorials</a></li>
+    <li><a href="Quizzes.html">Quizzes</a></li>
+    <li><a href="java.html">Java</a></li>
+    <li><a href="c.html">C</a></li>
+  </ul>
+  <div class="search-section">
+    <input type="text" placeholder="Search for Courses...">
+    <button>Search</button>
+  </div>
+  <ul>
+    <li><a href="certification.html">Certification</a></li>
+    <li><a href="plus.html">Plus✨</a></li>
+    <li><a href="reviews.html">Reviews</a></li>
+    <li><a href="contact.html">Contact Us</a></li>
+  </ul>
+</nav>
+
+<section class="payment-section">
+  <div class="payment-info">
+    <h2>💳 Unlock Premium Access Instantly!</h2>
+    <p>
+      Choose your favorite payment method and enjoy unlimited access to all courses, certifications, and premium resources! 🔓✨
+      <span>🎉 First-time users get exclusive discounts on select plans!</span>
+      <span>🛡️ 100% Safe & Secure Payments with SSL Encryption</span>
+      <span>🚀 Instant Activation after Payment!</span>
+      <h3><b>Select any of the payment options for Better Secured Payment </b></h3>
+    </p>
+  </div>
+  <div class="payment-options-container">
+    <div class="payment-option">
+      <a href="https://paytm.com" target="_blank">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvR20LRh4-pcOafAuQLx6owUKzT4Gh2Vr4MQ&s" alt="Paytm">
+      </a>
+    </div>
+
+    <div class="payment-option">
+      <a href="https://pay.google.com" target="_blank">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyVO9LUWF81Ov6LZR50eDNu5rNFCpkn0LwYQ&s" alt="Google Pay">
+      </a>
+    </div>
+
+    <div class="payment-option">
+      <a href="https://www.paypal.com" target="_blank">
+        <img src="https://cdn.iconscout.com/icon/free/png-256/free-paypal-logo-icon-download-in-svg-png-gif-file-formats--online-payment-logos-pack-icons-226455.png?f=webp&w=256" alt="PayPal">
+      </a>
+    </div>
+
+    <div class="payment-option">
+      <a href="https://www.stripe.com" target="_blank">
+        <img src="https://www.magicbell.com/static/uploads/stripe-logo.svg" alt="Stripe">
+      </a>
+    </div>
+
+    <div class="payment-option">
+      <a href="https://www.mastercard.us/en-us/personal/ways-to-pay/click-to-pay.html" target="_blank">
+        <img src="https://pngimg.com/d/mastercard_PNG16.png" alt="Mastercard">
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="countries-box">
+  <h2>Available in 9 countries, across the MENA region</h2>
+  <div class="countries-grid">
+    <div class="country"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/640px-Flag_of_India.svg.png" alt="India"><p>INDIA</p></div>
+    <div class="country"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/2560px-Flag_of_the_United_States.svg.png" alt="USA"><p>USA</p></div>
+    <div class="country"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Flag_of_New_Zealand.svg/1200px-Flag_of_New_Zealand.svg.png" alt="New Zealand"><p>NEW ZEALAND</p></div>
+    <div class="country"><img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg" alt="Canada"><p>CANADA</p></div>
+    <div class="country"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg/1200px-Flag_of_the_United_Kingdom_%281-2%29.svg.png" alt="UK"><p>UK</p></div>
+    <div class="country"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/03/Flag_of_Italy.svg/250px-Flag_of_Italy.svg.png" alt="Italy"><p>ITALY</p></div>
+    <div class="country"><img src="https://media.istockphoto.com/id/1388452601/vector/national-flag-of-bangladesh.jpg?s=612x612&w=0&k=20&c=ePTl98f64Fq-W8T4REgdWygDOsLPaXabxJ6bQcUOW5Q=" alt="Bangladesh"><p>BANGLADESH</p></div>
+    <div class="country"><img src="https://flagcdn.com/w320/om.png" alt="Oman"><p>Oman</p></div>
+  </div>
+</div>
+
+
+<div class="security-section">
+  <h2>100% SECURE</h2>
+  <p>Your money stays safe. WisdomWave protects your money with the best-in-class security systems that help minimize frauds.</p>
+ 
+  
+  <div class="security-features">
+    <div class="security-feature">
+      <h3>Secure & Compliant</h3><hr>
+      <p>Free yourself from the burden of regulatory compliance. Our payment gateway is PCI DSS compliant and offers data encryption, internal audits, and fraud detection capabilities, ensuring 100% secure transactions.</p>
+    </div>
+    <div class="security-feature">
+      <h3>Multiple Payment Methods</h3><hr>
+      <p>Offer your customers a wide range of payment methods, including UPI, Credit & Debit cards, Net banking, and digital wallets for maximum convenience.</p>
+    </div>
+    <div class="security-feature">
+      <h3>Instant Refunds</h3><hr>
+      <p>Our streamlined refund process ensures your customers get their money back quickly if needed, with full transparency throughout the process.</p>
+    </div>
+  </div>
+</div>
+
+<div class="payment-methods-section">
+  <h2>Multiple Payment Methods</h2>
+  <p>We support all popular payment options to give your customers maximum flexibility and convenience.</p>
+
+  <div class="payment-flex">
+    <div class="payment-text">
+      <div class="method-icons">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvR20LRh4-pcOafAuQLx6owUKzT4Gh2Vr4MQ&s" alt="UPI" class="method-icon">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyVO9LUWF81Ov6LZR50eDNu5rNFCpkn0LwYQ&s" alt="Debit Card" class="method-icon">
+        <img src="https://cdn.iconscout.com/icon/free/png-256/free-paypal-logo-icon-download-in-svg-png-gif-file-formats--online-payment-logos-pack-icons-226455.png?f=webp&w=256" alt="Net Banking" class="method-icon">
+        <img src="https://www.magicbell.com/static/uploads/stripe-logo.svg" alt="Google Pay" class="method-icon">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/MasterCard_Logo.svg/2560px-MasterCard_Logo.svg.png" alt="Credit Card" class="method-icon">
+      </div>
+    </div>
+    <img class="matter" src="pay.webp" alt="Payment Illustration">
+  </div>
+</div>
+</body>
+</html>
