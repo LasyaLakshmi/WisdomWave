@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Java Syntax Quiz - WisdomWave</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: linear-gradient(to right, #FFBB98, #FBE0C3);
+      color: #333;
+    }
+    .logo {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    nav {
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      background-color: #333;
+      padding: 15px 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    nav ul li {
+      margin-right: 30px;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 13px;
+      border-radius: 8px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    nav ul li a:hover {
+      background-color: white;
+      color: black;
+    }
+    .search-section {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .search-section input {
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      width: 200px;
+    }
+    .search-section button {
+      padding: 8px 16px;
+      background-color: #fff;
+      color: #333;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.2s, color 0.2s;
+    }
+    .search-section button:hover {
+      background-color: orange;
+      color: black;
+    }
+    .quiz-section {
+      padding: 60px 30px;
+      max-width: 900px;
+      margin: 60px auto;
+      background-color: #fff;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+    .quiz-section h2 {
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+      text-align: center;
+      color: #344648;
+    }
+    .question {
+      margin-bottom: 35px;
+    }
+    .question h3 {
+      font-size: 1.4rem;
+      margin-bottom: 15px;
+      color: #222;
+    }
+    .question label {
+      display: block;
+      background-color: #f9f9f9;
+      padding: 12px 18px;
+      margin-bottom: 10px;
+      border-radius: 12px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .question label:hover {
+      background-color: #f0f0f0;
+      transform: scale(1.01);
+    }
+    .question input[type="radio"] {
+      margin-right: 12px;
+    }
+    .btn-row {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 30px;
+    }
+    .submit-btn, .next-btn {
+      padding: 14px 20px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: white;
+      background: #404040;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      width: 48%;
+      text-decoration:none;
+    }
+    .submit-btn:hover, .next-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
+    }
+    .submit-btn {
+      text-align: center;
+      width:200px;
+    }
+    .next-btn {
+      text-align: center;
+      width:200px;
+    }
+    .divider {
+      width: 80%;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      margin: 60px auto 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <img class="logo" src="logo1.jpg" alt="Logo">
+      <li><a href="Wisdomwave_Home.html">Home</a></li>
+      <li><a href="Tutorialsjava.html">Tutorials</a></li>
+      <li><a href="Quizzes.html">Quizzes</a></li>
+      <li><a href="java.html">Java</a></li>
+      <li><a href="c.html">C</a></li>
+    </ul>
+    <div class="search-section">
+      <input type="text" placeholder="Search for Courses...">
+      <button>Search</button>
+    </div>
+    <ul>
+      <li><a href="certification.html">Certification</a></li>
+      <li><a href="plus.html">Plus✨</a></li>
+      <li><a href="reviews.html">Reviews</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <section class="quiz-section">
+    <h2>📘 Java Syntax Quiz</h2>
+    <form id="quizForm">
+      <div class="question">
+        <h3>1. What symbol is used to compare two values for equality in Java?</h3>
+        <label><input type="radio" name="q1" value="=="> ==</label>
+        <label><input type="radio" name="q1" value="="> =</label>
+        <label><input type="radio" name="q1" value="==="> ===</label>
+        <label><input type="radio" name="q1" value="!="> !=</label>
+      </div>
+
+      <div class="question">
+        <h3>2. Which of these is the correct signature for the main method?</h3>
+        <label><input type="radio" name="q2" value="public static void main(String args[])"> public static void main(String args[])</label>
+        <label><input type="radio" name="q2" value="public void main(String[] args)"> public void main(String[] args)</label>
+        <label><input type="radio" name="q2" value="static public void main(String args[])"> static public void main(String args[])</label>
+        <label><input type="radio" name="q2" value="public static main(String[] args) void"> public static main(String[] args) void</label>
+      </div>
+
+      <div class="question">
+        <h3>3. How do you write a single-line comment in Java?</h3>
+        <label><input type="radio" name="q3" value="<!-- comment -->"> <!-- comment --></label>
+        <label><input type="radio" name="q3" value="# comment"> # comment</label>
+        <label><input type="radio" name="q3" value="// comment"> // comment</label>
+        <label><input type="radio" name="q3" value="/* comment */"> /* comment */</label>
+      </div>
+
+      <div class="question">
+        <h3>4. Which keyword is used to declare a constant in Java?</h3>
+        <label><input type="radio" name="q4" value="final"> final</label>
+        <label><input type="radio" name="q4" value="immutable"> immutable</label>
+        <label><input type="radio" name="q4" value="static"> static</label>
+        <label><input type="radio" name="q4" value="const"> const</label>
+      </div>
+
+      <div class="question">
+        <h3>5. What is the correct way to print text to the console?</h3>
+        <label><input type="radio" name="q5" value="System.out.println('Hi')"> System.out.println('Hi')</label>
+        <label><input type="radio" name="q5" value="Console.log('Hi')"> Console.log('Hi')</label>
+        <label><input type="radio" name="q5" value="System.out.print('Hi')"> System.out.print('Hi')</label>
+        <label><input type="radio" name="q5" value="Print('Hi')"> Print('Hi')</label>
+      </div>
+
+      <div class="btn-row">
+        <a href="java syntax result.html" onclick="submitQuiz()" class="submit-btn">🚀 Submit Quiz</a>
+        <a href="java-variables.html" class="next-btn">Next</a>
+      </div>
+    </form>
+  </section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const quizForm = document.getElementById('quizForm');
+    const submitBtn = document.querySelector('.submit-btn');
+
+    // Correct answers
+    const correctAnswers = {
+      q1: "==",
+      q2: "public static void main(String args[])",
+      q3: "// comment",
+      q4: "final",
+      q5: "System.out.print('Hi')"
+    };
+
+    submitBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      
+      // Calculate score
+      let score = 0;
+      const userAnswers = {};
+      
+      // Check each question
+      const questions = quizForm.querySelectorAll('.question');
+      questions.forEach((question, index) => {
+        const questionName = `q${index + 1}`;
+        const selectedOption = question.querySelector(`input[name="${questionName}"]:checked`);
+        
+        if (selectedOption) {
+          userAnswers[questionName] = selectedOption.value;
+          if (selectedOption.value === correctAnswers[questionName]) {
+            score++;
+          }
+        }
+      });
+
+      // Store results in localStorage
+      localStorage.setItem('javaSyntaxQuizResults', JSON.stringify({
+        score: score,
+        total: Object.keys(correctAnswers).length,
+        userAnswers: userAnswers,
+        correctAnswers: correctAnswers
+      }));
+
+      // Redirect to results page
+      window.location.href = "java basic result.html";
+    });
+  });
+</script>
+
+</body>
+</html>

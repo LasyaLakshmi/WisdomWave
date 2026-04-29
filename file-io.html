@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Java File I/O Quiz - WisdomWave</title>
+ <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: linear-gradient(to right, #FFBB98,#FBE0C3);
+      color: #333;
+    }
+
+    .logo {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    nav {
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      background-color: #333;
+      padding: 15px 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    nav ul li {
+      margin-right: 30px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 13px;
+      border-radius: 8px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    nav ul li a:hover {
+      background-color: white;
+      color: black;
+    }
+
+    .search-section {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .search-section input {
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      width: 200px;
+    }
+
+    .search-section button {
+      padding: 8px 16px;
+      background-color: #fff;
+      color: #333;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.2s, color 0.2s;
+    }
+
+    .search-section button:hover {
+      background-color: orange;
+      color: black;
+    }
+
+    .quiz-section {
+      padding: 60px 30px;
+      max-width: 900px;
+      margin: 60px auto;
+      background-color: #fff;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    .quiz-section h2 {
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+      text-align: center;
+      color: #344648;
+    }
+
+    .question {
+      margin-bottom: 35px;
+    }
+
+    .question h3 {
+      font-size: 1.4rem;
+      margin-bottom: 15px;
+      color: #222;
+    }
+
+    .question label {
+      display: block;
+      background-color: #f9f9f9;
+      padding: 12px 18px;
+      margin-bottom: 10px;
+      border-radius: 12px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .question label:hover {
+      background-color: #f0f0f0;
+      transform: scale(1.01);
+    }
+
+    .question input[type="radio"] {
+      margin-right: 12px;
+    }
+
+    .btn-row {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 30px;
+    }
+
+    .submit-btn, .next-btn {
+      padding: 14px 24px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: white;
+      background:  #404040;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+      width: 48%;
+      text-align: center;
+      width:200px;
+      text-decoration:none;
+
+    }
+
+    .submit-btn:hover, .next-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.3);
+    }
+
+    .divider {
+      width: 80%;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      margin: 60px auto 40px;
+    }
+  </style>
+
+
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <img class="logo" src="logo1.jpg" alt="Logo">
+      <li><a href="Wisdomwave_Home.html">Home</a></li>
+      <li><a href="Tutorialsjava.html">Tutorials</a></li>
+      <li><a href="Quizzes.html">Quizzes</a></li>
+      <li><a href="java.html">Java</a></li>
+      <li><a href="c.html">C</a></li>
+    </ul>
+    <div class="search-section">
+      <input type="text" placeholder="Search for Courses...">
+      <button>Search</button>
+    </div>
+    <ul>
+      <li><a href="certification.html">Certification</a></li>
+      <li><a href="plus.html">Plus✨</a></li>
+      <li><a href="reviews.html">Reviews</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+
+
+  <section class="quiz-section">
+    <h2>📘 Java File I/O Quiz</h2>
+
+    <form action="#">
+      <div class="question">
+        <h3>1. Which class is used for reading the content of a file in Java?</h3>
+        <label><input type="radio" name="q1"> FileReader</label>
+        <label><input type="radio" name="q1"> BufferedReader</label>
+        <label><input type="radio" name="q1"> FileInputStream</label>
+        <label><input type="radio" name="q1"> All of the above</label>
+      </div>
+
+      <div class="question">
+        <h3>2. Which method is used to read data from a file in Java?</h3>
+        <label><input type="radio" name="q2"> read()</label>
+        <label><input type="radio" name="q2"> next()</label>
+        <label><input type="radio" name="q2"> get()</label>
+        <label><input type="radio" name="q2"> open()</label>
+      </div>
+
+      <div class="question">
+        <h3>3. What is the default character encoding used by FileReader in Java?</h3>
+        <label><input type="radio" name="q3"> UTF-8</label>
+        <label><input type="radio" name="q3"> ISO-8859-1</label>
+        <label><input type="radio" name="q3"> ASCII</label>
+        <label><input type="radio" name="q3"> UTF-16</label>
+      </div>
+
+      <div class="question">
+        <h3>4. Which class is used to write data to a file in Java?</h3>
+        <label><input type="radio" name="q4"> FileWriter</label>
+        <label><input type="radio" name="q4"> BufferedWriter</label>
+        <label><input type="radio" name="q4"> FileOutputStream</label>
+        <label><input type="radio" name="q4"> All of the above</label>
+      </div>
+
+      <div class="question">
+        <h3>5. Which exception is thrown when a file cannot be found in Java?</h3>
+        <label><input type="radio" name="q5"> FileNotFoundException</label>
+        <label><input type="radio" name="q5"> IOException</label>
+        <label><input type="radio" name="q5"> NullPointerException</label>
+        <label><input type="radio" name="q5"> ClassNotFoundException</label>
+      </div>
+
+      <div class="btn-row">
+        <button type="submit" class="submit-btn">🚀 Submit Quiz</button>
+        <a type="button" class="next-btn" href="collections.html">Next</a>
+      </div>
+    </form>
+  </section>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const quizForm = document.querySelector('form');
+    const submitBtn = document.querySelector('.submit-btn');
+
+    // Correct answers
+const correctAnswers = {
+  q1: "All of the above",
+  q2: "read()",
+  q3: "ISO-8859-1",
+  q4: "FileWriter",
+  q5: "FileNotFoundException"
+};
+    submitBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      
+      // Calculate score
+      let score = 0;
+      const userAnswers = {};
+      
+      // Get all selected answers
+      const questions = quizForm.querySelectorAll('.question');
+      questions.forEach((question, index) => {
+        const questionName = `q${index + 1}`;
+        const selectedOption = question.querySelector(`input[name="${questionName}"]:checked`);
+        
+        if (selectedOption) {
+          userAnswers[questionName] = selectedOption.nextSibling.textContent.trim();
+          if (selectedOption.nextSibling.textContent.trim() === correctAnswers[questionName]) {
+            score++;
+          }
+        }
+      });
+
+      // Store results in localStorage
+      localStorage.setItem('javaBasicQuizResults', JSON.stringify({
+        score: score,
+        total: Object.keys(correctAnswers).length,
+        userAnswers: userAnswers,
+        correctAnswers: correctAnswers
+      }));
+
+      // Redirect to results page
+      window.location.href = "java basic result.html";
+    });
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Java Tutorial | WisdomWave</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: linear-gradient(to right, #FFBB98, #FBE0C3);
+      color: #333;
+    }
+.logo {
+   position: absolute;
+   top: 10px;
+   left: 10px;
+   width: 50px;
+   height: 50px;
+   border-radius: 50%;
+   object-fit: cover;
+   border: 2px;
+}
+
+    nav {
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      background-color: #333;
+      padding: 15px 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    nav ul li {
+      margin-right: 30px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 14px;
+      border-radius: 8px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      background-color: white;
+      color: black;
+    }
+
+    .search-section {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .search-section input {
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      width: 200px;
+    }
+
+    .search-section button {
+      padding: 8px 16px;
+      background-color: #fff;
+      color: #333;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.2s, color 0.2s;
+    }
+
+    .search-section button:hover {
+      background-color: orange;
+      color: black;
+    }
+
+    .tutorial-container {
+      width: 950px;
+      margin: 50px auto;
+      background-color: #e6e6e6;
+      padding: 50px;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #404040;
+      font-size: 36px;
+    }
+
+    .chapter {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      margin-bottom: 30px;
+    }
+
+    .chapter h2 {
+      color: #2c7be5;
+      font-size: 28px;
+      margin-top: 0;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 10px;
+    }
+
+    .chapter h3 {
+      color: #3a3a3a;
+      font-size: 22px;
+      margin-top: 25px;
+    }
+
+    .chapter p, .chapter ul, .chapter ol {
+      font-size: 17px;
+      line-height: 1.6;
+    }
+
+    .chapter pre {
+      background-color: #f5f5f5;
+      padding: 15px;
+      border-radius: 8px;
+      overflow-x: auto;
+      font-family: 'Courier New', monospace;
+    }
+
+    .quiz-btn {
+    display: block; 
+    margin: 20px auto 0;
+    padding: 12px 25px;
+    background-color:#404040;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    width: fit-content;
+    }
+
+    .code {
+      background-color: #f0f0f0;
+      padding: 2px 5px;
+      border-radius: 3px;
+      font-family: 'Courier New', monospace;
+    }
+
+    .note {
+      background-color: #fffde7;
+      padding: 15px;
+      border-left: 4px solid #ffd600;
+      margin: 20px 0;
+    }
+
+    .button-row {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 40px;
+    }
+
+    .nav-btn {
+      padding: 12px 25px;
+      background-color: #404040;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .nav-btn:hover {
+      background-color: #333;
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <ul>
+    <img class="logo" src="logo1.jpg" alt="Logo">
+    <li><a href="Wisdomwave_Home.html">Home</a></li>
+    <li><a href="Tutorialsjava.html">Tutorials</a></li>
+    <li><a href="Quizzes.html">Quizzes</a></li>
+    <li><a href="java.html">Java</a></li>
+    <li><a href="c.html">C</a></li>
+  </ul>
+  <div class="search-section">
+    <input type="text" placeholder="Search for Courses...">
+    <button>Search</button>
+  </div>
+  <ul>
+    <li><a href="certification.html">Certification</a></li>
+    <li><a href="plus.html">Plus✨</a></li>
+    <li><a href="reviews.html">Reviews</a></li>
+    <li><a href="contact.html">Contact Us</a></li>
+  </ul>
+</nav>
+
+<div class="tutorial-container">
+  <h1>Java Programming Tutorial</h1>
+
+  <div class="chapter">
+    <h2>1. Introduction to Java</h2>
+    
+    <h3>What is Java?</h3>
+    <p>Java is a high-level, object-oriented programming language developed by Sun Microsystems (now owned by Oracle). It's designed to be platform-independent, meaning Java code can run on any device that has a Java Virtual Machine (JVM).</p>
+    
+    <h3>Key Features of Java</h3>
+    <ul>
+      <li><strong>Platform Independent:</strong> Write once, run anywhere (WORA)</li>
+      <li><strong>Object-Oriented:</strong> Follows OOP concepts like inheritance, polymorphism, etc.</li>
+      <li><strong>Secure:</strong> Provides security features like bytecode verification</li>
+      <li><strong>Multithreaded:</strong> Supports concurrent programming</li>
+      <li><strong>Robust:</strong> Strong memory management and exception handling</li>
+    </ul>
+    
+    <a href="java-basics.html" class="quiz-btn">Take Quiz on Java Basics</a>
+  </div>
+
+  <div class="chapter">
+    <h2>2. Java Syntax Basics</h2>
+    
+    <h3>Hello World Program</h3>
+    <pre>public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}</pre>
+    
+    <h3>Basic Syntax Rules</h3>
+    <ul>
+      <li>Java is case-sensitive</li>
+      <li>Class names should start with uppercase letter</li>
+      <li>Method names should start with lowercase letter</li>
+      <li>Program execution begins with <span class="code">main()</span> method</li>
+      <li>Each statement must end with a semicolon</li>
+    </ul>
+    
+    <div class="note">
+      <strong>Note:</strong> The filename must match the class name (with .java extension). For the above example, the file must be named "HelloWorld.java".
+    </div>
+    
+    <a href="java-syntax.html" class="quiz-btn">Take Quiz on Java Syntax</a>
+  </div>
+
+  <div class="chapter">
+    <h2>3. Variables and Data Types</h2>
+    
+    <h3>Primitive Data Types</h3>
+    <ul>
+      <li><span class="code">byte</span> - 8-bit integer</li>
+      <li><span class="code">short</span> - 16-bit integer</li>
+      <li><span class="code">int</span> - 32-bit integer (most common)</li>
+      <li><span class="code">long</span> - 64-bit integer</li>
+      <li><span class="code">float</span> - 32-bit floating point</li>
+      <li><span class="code">double</span> - 64-bit floating point (most common)</li>
+      <li><span class="code">boolean</span> - true/false values</li>
+      <li><span class="code">char</span> - single 16-bit Unicode character</li>
+    </ul>
+    
+    <h3>Variable Declaration Example</h3>
+    <pre>public class Variables {
+    public static void main(String[] args) {
+        int age = 25;
+        double price = 19.99;
+        char grade = 'A';
+        boolean isJavaFun = true;
+        
+        System.out.println("Age: " + age);
+        System.out.println("Price: " + price);
+    }
+}</pre>
+    
+    <a href="java-variables.html" class="quiz-btn">Take Quiz on Variables</a>
+  </div>
+
+  <div class="button-row">
+    <a href="Tutorialsjava.html" class="nav-btn">← Back to Tutorials</a>
+    <a href="next1.html" class="nav-btn">Next: Control Flow →</a>
+  </div>
+</div>
+
+</body>
+</html>
